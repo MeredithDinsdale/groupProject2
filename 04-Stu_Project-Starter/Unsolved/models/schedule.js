@@ -3,29 +3,19 @@ module.exports = function(sequelize, DataTypes) {
   var schedule = sequelize.define("schedule", {
     plant: {
       type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
+      allowNull: false
     },
     plant_date: {
       type: DataTypes.INTEGER,
-      allowNull: false,
-      len: [1]
+      allowNull: false
     },
     maturity_timeline: {
       type: DataTypes.INTEGER,
-      allowNull: true,
-      validate: {
-        len: [1]
-      }
+      allowNull: true
     },
     notes: {
       type: DataTypes.TEXT,
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
+      allowNull: false
     }
   });
   return schedule;

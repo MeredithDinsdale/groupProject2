@@ -24,6 +24,7 @@ app.set("view engine", "handlebars");
 // Routes
 require("./routes/journal-api-routes")(app);
 require("./routes/schedule-api-routes")(app);
+require("./routes/auth-api-routes")(app);
 require("./routes/htmlRoutes")(app);
 
 var syncOptions = { force: false };

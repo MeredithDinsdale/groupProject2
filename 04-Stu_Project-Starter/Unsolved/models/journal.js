@@ -2,15 +2,15 @@ module.exports = function(sequelize, DataTypes) {
   var journal = sequelize.define("journal", {
     title: {
       type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
+      allowNull: false
     },
     body: {
       type: DataTypes.TEXT,
-      allowNull: false,
-      len: [1]
+      allowNull: false
+    },
+    date: {
+      type: DataTypes.DATE,
+      allowNull: false
     }
   });
   return journal;
