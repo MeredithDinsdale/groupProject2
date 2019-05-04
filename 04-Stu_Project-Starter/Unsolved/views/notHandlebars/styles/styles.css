@@ -1,0 +1,138 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=KoHo:200,300,400,500,600,700|Montserrat:100,300,400,900');
+
+body {
+  background-image: url(../assets/bgimage-01.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  font-family: Montserrat;
+  font-weight: 300;
+  font-size: .9em;
+  letter-spacing: .01em;
+
+}
+
+.container {
+  padding-bottom: 20px;
+}
+
+.aja {
+  text-transform: uppercase;
+  font-family: Koho;
+  font-weight: 500;
+  font-size: 3em;
+  letter-spacing: .03em;
+  padding: 30px;
+  color: #2DA6A0;
+  text-shadow: 4px 4px 10px rgba(11, 107, 99, 0.5)
+}
+
+.space {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.date {
+  font-family: Montserrat;
+  font-weight: 300;
+  font-size: .8em;
+  letter-spacing: .01em;
+}
+
+h5 {
+  color: #2DA6A0;
+  text-transform: uppercase;
+  font-family: Koho;
+  font-weight: 500;
+  font-size: 1em;
+  letter-spacing: .03em;
+  text-shadow: 4px 4px 10px rgba(11, 107, 99, 0.5);
+  padding-bottom: 25px;
+}
+
+label {
+  text-transform: uppercase;
+  font-family: Koho;
+  font-weight: 500;
+  font-size: 1em;
+  color: #2DA6A0;
+  letter-spacing: .03em;
+  text-shadow: 4px 4px 10px rgba(11, 107, 99, 0.5)
+}
+
+
+
+.form-group {
+  padding-bottom: 15px;
+
+}
+
+.logo {
+  max-width: 45%;
+}
+
+.button {
+  color: #2DA6A0;
+  box-shadow: 4px 4px 10px rgba(11, 107, 99, 0.5);
+  background-color: #FFF;
+  border-color: #2DA6A0;
+  text-transform: uppercase;
+  font-family: Koho;
+  font-weight: 600;
+  font-size: 1em;
+  letter-spacing: .02em;
+
+}
+
+.entry {
+
+  color: #2DA6A0;
+  box-shadow: 4px 4px 10px rgba(11, 107, 99, 0.5);
+  background-color: #FFF;
+  border-color: #2DA6A0;
+  text-transform: uppercase;
+  font-family: Koho;
+  font-weight: 600;
+  font-size: .8em;
+  letter-spacing: .02em;
+}
+
+.entry:hover {
+  border-color: #2DA6A0;
+  box-shadow: 4px 4px 10px rgba(11, 107, 99, 0.5);
+  background-color: #2DA6A0;
+  color: #FFF;
+  text-transform: uppercase;
+  font-family: Koho;
+  font-weight: 600;
+  font-size: .8em;
+  letter-spacing: .02em;
+}
+
+.card-header {
+  color: #2DA6A0;
+  text-transform: uppercase;
+  font-family: Koho;
+  font-weight: 600;
+  font-size: 1.2em;
+  letter-spacing: .02em;
+}
+
+.button:hover {
+  border-color: #2DA6A0;
+  box-shadow: 4px 4px 10px rgba(11, 107, 99, 0.5);
+  background-color: #2DA6A0;
+  color: #FFF;
+  text-transform: uppercase;
+  font-family: Koho;
+  font-weight: 600;
+  font-size: 1em;
+  letter-spacing: .02em;
+}
+
+.bgwhite {
+  background-color: #FFF;
+  box-shadow: 4px 4px 10px rgba(11, 107, 99, 0.5);
+}
