@@ -1,6 +1,7 @@
 require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
+var passport = require("./config/passport");
 
 var db = require("./models");
 
@@ -11,7 +12,8 @@ var PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));
-
+app.use(passport.initialize());
+app.use(passport.session());
 // Handlebars
 app.engine(
   "handlebars",
@@ -24,6 +26,7 @@ app.set("view engine", "handlebars");
 // Routes
 require("./routes/journal-api-routes")(app);
 require("./routes/schedule-api-routes")(app);
+require("./routes/rpi-api-routes")(app);
 require("./routes/auth-api-routes")(app);
 require("./routes/htmlRoutes")(app);
 

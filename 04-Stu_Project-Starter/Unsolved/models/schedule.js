@@ -5,10 +5,6 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     },
-    plant_date: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
     maturity_timeline: {
       type: DataTypes.INTEGER,
       allowNull: true
