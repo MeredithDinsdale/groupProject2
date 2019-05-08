@@ -9,11 +9,17 @@ var app = express();
 var PORT = process.env.PORT || 3000;
 
 // Middleware
+//==Express
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));
+//==Passport
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(
+  session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
+);
+
 // Handlebars
 app.engine(
   "handlebars",

@@ -2,9 +2,21 @@ var db = require("../models");
 
 module.exports = function(app) {
   app.get("/api/data/", function(req, res) {
-    db.rpi.findAll({}).then(function(dbrpi) {
+    db.rpi.findAll({ }).then(function(dbrpi) {
       res.json(dbrpi);
     });
+  });
+
+  app.get("/api/posts/:mac_address", function(req, res) {
+    db.rpi
+      .findOne({
+        where: {
+          mac_address: req.params.mac_address
+        }
+      })
+      .then(function(dbrpi) {
+        res.json(dbrpi);
+      });
   });
 
   app.put("/api/data", function(req, res) {

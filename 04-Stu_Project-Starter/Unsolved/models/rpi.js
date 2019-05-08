@@ -7,7 +7,19 @@ module.exports = function(sequelize, DataTypes) {
     temp: {
       type: DataTypes.INTEGER,
       allowNull: false
+    },
+    mac_address: {
+      type: DataTypes.INTEGER,
+      allowNull: false
     }
   });
+  rpi.associate = function(models) {
+    // We're saying that rpi data should belong to a user
+    rpi.belongsTo(models.User, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
   return rpiData;
 };

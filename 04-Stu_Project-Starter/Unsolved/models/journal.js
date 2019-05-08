@@ -9,5 +9,14 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     }
   });
+  journal.associate = function(models) {
+    // We're saying that a journal post should belong to a user
+    // A journal post can't be created without a user due to the foreign key constraint
+    journal.belongsTo(models.User, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
   return journal;
 };
