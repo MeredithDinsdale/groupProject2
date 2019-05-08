@@ -14,29 +14,34 @@
   </script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="./styles/styles.css" media="screen" title="no title" charset="utf-8">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./styles/styles.css" media="screen" title="no title" charset="utf-8">
-  <title>Log-in to your AJA account</title>
+  <link rel="stylesheet" href="./notHandlebars/styles/styles.css" media="screen" title="no title" charset="utf-8">
+  <title>Sign-Up</title>
 </head>
 
 <body>
-
   <div class="container">
+
+    <H1>HELLOOOOOOO</H1>
+    <h2>please work</h2>
     <div class="row">
       <div class="col-xs-12 text-center mx-auto">
 
         <h1 class="aja">WELCOME TO AJA</h1>
         <img class="logo img-fluid" src="./assets/aja-logo@2x.png" alt="Aja App logo image">
-        <h5>LOG IN!</h5>
+        <h5>Sign up to track your gardens growth!</h5>
       </div>
     </div>
     <div class="row">
       <div class="col-sm-12 mx-auto">
         <form class="space">
           <div class="form-group">
+            <label for="inputName">Name</label>
+            <input type="name" class="form-control" id="inputName" placeholder="Enter your name">
+          </div>
+
+          <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="email"
               placeholder="Enter your email">
           </div>
           <div class="form-group">
@@ -44,12 +49,18 @@
             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
           </div>
 
-          <button type="submit" class="btn btn-block button">Log In</button>
+          <div class="form-group">
+            <label for="rasPi">Your Garden Sensor Code</label>
+            <input type="password" class="form-control" id="rasPi" placeholder="Your Garden Sensor Code">
+          </div>
+
+          <button type="submit" class="btn btn-block button">Sign-Up</button>
         </form>
 
       </div>
     </div>
   </div>
+
 
 
 

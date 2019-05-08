@@ -16,9 +16,9 @@ app.use(express.static("public"));
 //==Passport
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(
-  session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
-);
+// app.use(
+//   session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
+// );
 
 // Handlebars
 app.engine(
