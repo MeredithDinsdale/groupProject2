@@ -5,10 +5,6 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     },
-    plant_date: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
     maturity_timeline: {
       type: DataTypes.INTEGER,
       allowNull: true
@@ -18,5 +14,14 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     }
   });
+  schedule.associate = function(models) {
+    // We're saying that a schedule post should belong to a user
+    // A schedule post can't be created without a user due to the foreign key constraint
+    schedule.belongsTo(models.User, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
   return schedule;
 };
