@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+  <link rel="stylesheet" href="./styles/styles.css" media="screen" title="no title" charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="./styles/vertical-timeline.css" />
+
+
+  <title>TIMELINE</title>
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar justify-content-center">
+      <form class="form-inline">
+        <button class="btn btn-sm nav" type="button">
+          <a href="./main.html">Home</a>
+        </button>
+        <button class="btn btn-sm btn-outline-secondary nav" type="button">
+          <a href="./journal.html">Journal</a>
+        </button>
+      </form>
+    </nav>
+
+    <h1 class="aja text-center">
+      <img src="./assets/aja-logo@2x.png" class="logo" />TIMELINE
+    </h1>
+  </div>
+
+  <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h4 class="modal-title w-100 add">ADD TO TIMELINE</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-body mx-3">
+          <div class="md-form mb-5">
+
+
+
+            <label data-error="wrong" data-success="right" for="date">DATE</label>
+            <input type="datetime-local" class="form-control validate" />
+
+          </div>
+
+          <div class="md-form mb-5">
+            <label data-success="right" for="yourNotes">YOUR NOTES</label>
+            <input type="text" id="details" class="form-control validate" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+
+        <div class="md-form mb-4">
+          <div class="form-group">
+            <div class="modal-footer d-flex justify-content-center">
+              <button class="btn button">ADD TO TIMELINE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="text-center">
+    <a href="" class="btn btn-default btn-sm button" data-toggle="modal" data-target="#modalLoginForm">ADD TO
+      TIMELINE</a>
+  </div>
+
+  <div id="myTimeline">
+    <div data-v vtimeline-block="February 2016" class="timelinepadding">
+      My Timeline Content 1
+      <p>
+        content of timeline goes here
+      </p>
+    </div>
+    <div data-v vtimeline-block="April 2016" class="timelinepadding">
+      My Timeline Content 2
+      <p>
+        content of timeline goes here
+      </p>
+    </div>
+    <div data-v vtimeline-block="April 2016" class="timelinepadding">
+      My Timeline Content 3
+      <p>
+        content of timeline goes here
+      </p>
+    </div>
+  </div>
+
+  <script src="./js/vertical-timeline.js"></script>
+  <script src="./js/timeline.js"></script>
+
+</body>
+
+</html>
