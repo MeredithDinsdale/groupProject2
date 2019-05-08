@@ -3,7 +3,19 @@
 
 <head>
   <meta charset="utf-8" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" />
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles/styles.css" media="screen" title="no title" charset="utf-8">
+
   <link rel="stylesheet" href="./styles/styles.css" media="screen" title="no title" charset="utf-8" />
 
   <title>AJA DATA</title>
@@ -11,7 +23,18 @@
 
 <body>
   <div class="container">
-    <h1 class="aja text-center">AJA</h1>
+    <nav class="navbar justify-content-center">
+      <form class="form-inline">
+        <button class="btn btn-sm nav" type="button"><a href="./journal.html">YOUR Journal</a></button>
+        <button class="btn btn-sm btn-outline-secondary nav" type="button"><a href="./timeline.html">AJA
+            Timeline</a></button>
+      </form>
+    </nav>
+
+    <h1 class="aja text-center"><img src="./assets/aja-logo@2x.png" class="logo">AJA </h1>
+
+
+
 
     <div class="row">
       <div class="col-sm-8 mx-auto">
@@ -20,7 +43,7 @@
           <h3 class="card-header">Temperature READINGS</h3>
           <h3 class="card-footer date">TODAY IS:</h3>
           <div class="card-body">
-            <h5 class="card-title">Temperature CHART FOR YEAR</h5>
+            <h5 class="card-title">Temperature CHART FOR WEEK OF</h5>
 
             <canvas id="myChart" style="position: relative; height: 70vh"></canvas>
 
@@ -29,7 +52,7 @@
 
           <div class="card-footer text-center">
             <a href="./journal.html" class="btn btn-primary btn-sm  entry">Your Journal</a>
-            <a href="./main.html" class="btn btn-primary  btn-sm entry">AJA HOME</a>
+            <a href="./timeline.html" class="btn btn-primary  btn-sm entry">AJA TIMELINE</a>
           </div>
         </div>
       </div>
@@ -37,7 +60,7 @@
   </div>
 
   <!-- cdn for charts -->
-
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.3/dist/Chart.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.5.0"></script>
