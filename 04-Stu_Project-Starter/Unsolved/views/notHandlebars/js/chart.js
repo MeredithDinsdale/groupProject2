@@ -1,6 +1,6 @@
 var ctx = document.getElementById("myChart");
 Chart.defaults.global.defaultFontFamily = "Montserrat";
-Chart.defaults.global.defaultFontSize = 7;
+Chart.defaults.global.defaultFontSize = 9;
 
 var myChart = new Chart(ctx, {
   type: "bar",
@@ -11,24 +11,28 @@ var myChart = new Chart(ctx, {
     },
 
     labels: [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December"
+      "Monday",
+      "Tuesday",
+      " Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
     ],
     datasets: [
       {
-        label: "MONTHLY TEMPERATURE AVERAGE",
-        data: [12, 19, 22, 99, 17, 12],
-        backgroundColor: ["rgb(45,166,160)"],
+        label: "DAILY TEMPERATURE AVERAGE FOR WEEK OF ... ",
+        data: [62, 69, 68, 89, 75, 74, 88],
+        backgroundColor: [
+          "rgb(45,166,160)",
+          "rgb(45,166,160)",
+          "rgb(45,166,160)",
+          "rgb(45,166,160)",
+          "rgb(45,166,160)",
+          "rgb(45,166,160)",
+          "rgb(45,166,160)",
+          "rgb(45,166,160)"
+        ],
         borderColor: ["rgb(45,166,160)"],
         borderWidth: 0
       }
