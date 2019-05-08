@@ -3,7 +3,7 @@ Chart.defaults.global.defaultFontFamily = "Montserrat";
 Chart.defaults.global.defaultFontSize = 9;
 
 var myChart = new Chart(ctx, {
-  type: "bar",
+  type: "line",
   data: {
     options: {
       responsive: true,
@@ -21,7 +21,7 @@ var myChart = new Chart(ctx, {
     ],
     datasets: [
       {
-        label: "DAILY TEMPERATURE AVERAGE FOR WEEK OF ... ",
+        label: "CURRENT TEMPERATURE ",
         data: [62, 69, 68, 89, 75, 74, 88],
         backgroundColor: [
           "rgb(45,166,160)",
