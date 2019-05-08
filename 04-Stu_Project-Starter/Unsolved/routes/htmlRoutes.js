@@ -10,16 +10,31 @@ module.exports = function(app) {
 
   // index route loads view.html
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/notHandlebars/login.html"));
+    res.sendFile(path.join(__dirname, "../public/notHandlebars/index.html"));
+  });
+
+  app.get("/login", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/notHandlebars/login.html"));
+  });
+
+  app.get("/signup", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/notHandlebars/signup.html"));
+  });
+
+  app.get("/rpisetup", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/notHandlebars/rpisetup.html"));
   });
 
   app.get("/main", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/notHandlebars/main.html"));
+    res.sendFile(path.join(__dirname, "../public/notHandlebars/main.html"));
   });
 
-  // blog route loads blog.html
   app.get("/journal", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/notHandlebars/journal.html"));
+    res.sendFile(path.join(__dirname, "../public/notHandlebars/journal.html"));
+  });
+
+  app.get("/timeline", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/notHandlebars/timeline.html"));
   });
 
 };

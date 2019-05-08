@@ -14,7 +14,7 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
   rpiData.associate = function(models) {
-    // We're saying that rpiData data should belong to a user
+    // We're saying that rpi data should belong to a user
     rpiData.belongsTo(models.User, {
       foreignKey: {
         allowNull: false
