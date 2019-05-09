@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "S1lverfi$h",
+    "password": "password",
     "database": "plants_db",
     "host": "localhost",
     "dialect": "mysql"
