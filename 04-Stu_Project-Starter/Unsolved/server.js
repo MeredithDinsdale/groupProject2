@@ -1,7 +1,8 @@
-require("dotenv").config();
+//require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
 var passport = require("./config/passport");
+//var env = require("dotenv").load();
 
 var db = require("./models");
 
