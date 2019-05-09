@@ -92,6 +92,7 @@ label {
   font-size: 1em;
   letter-spacing: 0.02em;
 }
+
 .entry {
   color: #2da6a0;
   box-shadow: 4px 4px 10px rgba(11, 107, 99, 0.5);
@@ -136,6 +137,16 @@ label {
   font-size: 1em;
   letter-spacing: 0.02em;
 }
+
+.button a {
+  color: #2da6a0;
+}
+
+.button a:hover {
+  color: #fff;
+}
+
+
 
 .bgwhite {
   background-color: #fff;
