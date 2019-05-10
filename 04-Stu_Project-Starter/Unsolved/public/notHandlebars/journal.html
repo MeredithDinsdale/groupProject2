@@ -4,10 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,height=device-height initial-scale=1">
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-  </script>
+  <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
   </script>
@@ -28,10 +25,16 @@
 
   <div class="container">
     <nav class="navbar justify-content-center">
+
+      <!-- add post
+   -->
+
+
+
+
       <form class="form-inline">
-        <button class="btn btn-sm nav" type="button"><a href="./journal.html">Journal</a></button>
-        <button class="btn btn-sm btn-outline-secondary nav" type="button"><a
-            href="./timeline.html">Timeline</a></button>
+        <a class="btn button" href="/notHandlebars/main.html">Main</a>
+        <a class="btn button" href="/notHandlebars/timeline.html">Timeline</a>
       </form>
     </nav>
 
@@ -39,27 +42,27 @@
       Journal</h1>
 
     <div class="row">
-      <div class="col-xs mx-auto">
+      <div class="col-sm-5 mx-auto">
 
 
         <div class="columns mb-3">
           <div class="bgwhite">
             <h3 class="card-header">ENTRY TITLE</h3>
-            <h3 class="card-footer date text-center">DATE POSTED: </h3>
+            <h3 class="card-footer date text-center" id="date">DATE: </h3>
             <div class="card-body">
-              <h5 class="card-title">Entry #</h5>
+
 
             </div>
-            <img style="height: auto; width: 50%; display: block;" src="assets/journal-entry@2x.png" alt="add image"
-              class="img-fluid mx-auto">
+            <img style="height: auto; width: 50%; display: block;" src="../notHandlebars/assets/journal-entry@2x.png"
+              alt="add image" class="img-fluid mx-auto">
             <div class="card-body">
               <p class="card-text">Body of jounral entry here.....</p>
             </div>
 
             <div class="card-footer text-center">
 
-              <a href="#" class="btn  btn-sm button entry">EDIT ENTRY</a>
-              <a href="./main.html" class="btn btn-sm entry">AJA HOME</a>
+              <a href="#" class="btn btn-sm button entry space">EDIT ENTRY</a>
+              <a href="./main.html" class="btn btn-sm entry space">AJA HOME</a>
             </div>
 
 
@@ -73,8 +76,11 @@
   </div>
 
 
-
-
+  <script src="/js/journal.js"></script>
+  <script>
+    var d = new Date();
+    document.getElementById("date").innerHTML = d.toDateString();
+  </script>
 
 </body>
 

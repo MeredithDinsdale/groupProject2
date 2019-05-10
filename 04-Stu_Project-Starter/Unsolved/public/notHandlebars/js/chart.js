@@ -23,16 +23,7 @@ var myChart = new Chart(ctx, {
       {
         label: "CURRENT TEMPERATURE ",
         data: [62, 69, 68, 89, 75, 74, 88],
-        backgroundColor: [
-          "rgb(45,166,160)",
-          "rgb(45,166,160)",
-          "rgb(45,166,160)",
-          "rgb(45,166,160)",
-          "rgb(45,166,160)",
-          "rgb(45,166,160)",
-          "rgb(45,166,160)",
-          "rgb(45,166,160)"
-        ],
+
         borderColor: ["rgb(45,166,160)"],
         borderWidth: 0
       }

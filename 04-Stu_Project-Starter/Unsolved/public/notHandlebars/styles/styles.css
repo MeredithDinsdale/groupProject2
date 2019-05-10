@@ -11,6 +11,7 @@ body {
   font-weight: 300;
   font-size: 0.9em;
   letter-spacing: 0.01em;
+  margin: 10px;
 }
 
 .container {
@@ -29,8 +30,7 @@ body {
 }
 
 .space {
-  padding-left: 60px;
-  padding-right: 60px;
+  margin-bottom: 20px;
 }
 
 .date {
@@ -38,6 +38,7 @@ body {
   font-weight: 300;
   font-size: 0.8em;
   letter-spacing: 0.01em;
+
 }
 
 h5 {
@@ -65,7 +66,7 @@ label {
   padding-bottom: 15px;
 }
 
-.logo {
+.logo img {
   max-width: 45%;
 }
 
@@ -91,6 +92,14 @@ label {
   font-weight: 600;
   font-size: 1em;
   letter-spacing: 0.02em;
+}
+
+
+.card-text {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 0.8em;
+  letter-spacing: 0.01em;
 }
 
 .entry {
@@ -136,6 +145,7 @@ label {
   font-weight: 600;
   font-size: 1em;
   letter-spacing: 0.02em;
+  text-align: center;
 }
 
 .button a {
@@ -144,6 +154,7 @@ label {
 
 .button a:hover {
   color: #fff;
+  text-align: center;
 }
 
 
@@ -154,26 +165,29 @@ label {
 }
 
 .nav {
-  border-color: #2da6a0;
-  box-shadow: 4px 4px 10px rgba(11, 107, 99, 0.5);
 
+  box-shadow: 4px 4px 10px rgba(11, 107, 99, 0.5);
+  background-color: #FFF;
   text-transform: uppercase;
   font-family: Koho;
   font-weight: 600;
   font-size: 0.8em;
   letter-spacing: 0.04em;
-  padding: 4px;
-  margin-left: 5px;
+  margin: 5px;
   text-align: center;
 }
 
 .nav a {
   color: #2da6a0;
   text-decoration: none;
+  padding: 2px;
+  text-align: center;
 }
 
-nav a:hover {
+.nav a:hover {
   color: #fff;
+  background-color: #2da6a0;
+  text-decoration: none;
 }
 
 .nav:hover {
@@ -194,10 +208,8 @@ nav a:hover {
   width: auto;
 }
 
-/* timeline
+/* timeline  */
 
-
-LICENSE: MIT */
 
 .vtimeline {
   position: relative;
@@ -370,5 +382,13 @@ LICENSE: MIT */
   letter-spacing: 0.04em;
   padding: 4px;
   margin-left: 5px;
+  text-align: center;
+}
+
+#temp {
+  font-family: Koho;
+  color: #2da6a0;
+  font-weight: 600;
+  font-size: 5.5em;
   text-align: center;
 }
