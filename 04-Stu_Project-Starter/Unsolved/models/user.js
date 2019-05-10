@@ -17,12 +17,12 @@ module.exports = function(sequelize, DataTypes) {
     password: {
       type: DataTypes.STRING,
       allowNull: false
-    },
-    mac: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true
     }
+    // mac: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    //   unique: true
+    // }
   });
 
   User.associate = function(models) {
@@ -31,22 +31,14 @@ module.exports = function(sequelize, DataTypes) {
     User.hasMany(models.rpi, {
       onDelete: "cascade"
     });
-  };
-  User.associate = function(models) {
-    // Associating user with journal posts
-    // When a user is deleted, also delete any associated data
     User.hasMany(models.journal, {
       onDelete: "cascade"
     });
-  };
-  User.associate = function(models) {
-    // Associating user with schedule posts
-    // When a user is deleted, also delete any associated data
     User.hasMany(models.schedule, {
       onDelete: "cascade"
     });
   };
-  
+
   // Creating a custom method for our User model. This will check if an unhashed password entered by the user can be compared to the hashed password stored in our database
   User.prototype.validPassword = function(password) {
     return bcrypt.compareSync(password, this.password);
