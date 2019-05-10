@@ -8,9 +8,9 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER,
       allowNull: false
     },
-    mac: {
-      type: DataTypes.INTEGER,
-      allowNull: true
+    mac_address: {
+      type: DataTypes.STRING,
+      allowNull: false
     }
   });
   rpiData.associate = function(models) {
