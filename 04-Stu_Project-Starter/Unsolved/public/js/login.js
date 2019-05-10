@@ -11,6 +11,8 @@ $(document).ready(function() {
       email: emailInput.val().trim(),
       password: passwordInput.val().trim()
     };
+    console.log("I hear you logging in...");
+    console.log(userData);
 
     if (!userData.email || !userData.password) {
       return;
@@ -28,7 +30,7 @@ $(document).ready(function() {
       email: email,
       password: password
     })
-      .then(function(data) {
+      .done(function(data) {
         window.location.replace(data);
         // If there's an error, log the error
       })

@@ -18,11 +18,6 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     }
-    // mac: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    //   unique: true
-    // }
   });
 
   User.associate = function(models) {

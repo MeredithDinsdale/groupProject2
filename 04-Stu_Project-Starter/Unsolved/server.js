@@ -1,7 +1,8 @@
 //require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
-var passport = require("./config/passport");
+var passport = require("passport");
+var session = require("express-session");
 //var env = require("dotenv").load();
 
 var db = require("./models");
@@ -17,9 +18,9 @@ app.use(express.static("public"));
 //==Passport
 app.use(passport.initialize());
 app.use(passport.session());
-// app.use(
-//   session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
-// );
+app.use(
+  session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
+);
 
 // Handlebars
 app.engine(
