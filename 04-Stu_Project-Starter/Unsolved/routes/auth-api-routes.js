@@ -23,13 +23,23 @@ module.exports = function(app) {
       password: req.body.password,
       mac: req.body.mac
     })
-      .then(function() {
-        res.redirect(307, "/api/login");
+      .then(function(data) {
+        console.log(data.dataValues.id);
+        res.status(200);
+        db.rpi.create({
+          light: false,
+          temp: 0,
+          // eslint-disable-next-line camelcase
+          mac_address: req.body.mac,
+          UserId: data.dataValues.id
+        });
       })
       .catch(function(err) {
         console.log(err);
-        res.json(err);
-        // res.status(422).json(err.errors[0].message);
+        //res.json(err);
+        console.log("there was an error");
+        //res.status(409);
+        res.status(409).json(err.errors[0].errno);
       });
   });
 
