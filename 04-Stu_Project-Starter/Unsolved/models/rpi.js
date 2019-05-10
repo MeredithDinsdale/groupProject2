@@ -8,16 +8,16 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER,
       allowNull: false
     },
-    mac_address: {
+    mac: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: true
     }
   });
   rpiData.associate = function(models) {
     // We're saying that rpi data should belong to a user
     rpiData.belongsTo(models.User, {
       foreignKey: {
-        allowNull: false
+        allowNull: true
       }
     });
   };

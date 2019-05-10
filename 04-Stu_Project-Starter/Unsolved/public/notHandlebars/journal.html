@@ -50,7 +50,7 @@
             <img style="height: auto; width: 50%; display: block;" src="assets/journal-entry@2x.png" alt="add image"
               class="img-fluid mx-auto">
             <div class="card-body">
-              <p class="card-text">Body of jounral entry here.....</p>
+              <p class="journal-container">Body of jounral entry here.....</p>
             </div>
 
             <div class="card-footer text-center">
@@ -65,8 +65,24 @@
         </div>
       </div>
 
-
+<!-- Make new journal entry -->
     </div>
+    <div class="row">
+			<div class="col-md-6 offset-md-3">
+				<form id="new-entry">
+					<div class="form-group">
+						<label for="title">Title:</label>
+						<input placeholder="Post Title" type="text" class="form-control" id="title">
+						<br />
+						<label for="body">Body:</label>
+						<textarea placeholder="Post Body" class="form-control" rows="10" id="body"></textarea>
+					
+						<br />
+						<button type="submit" class="btn btn-success submit">Submit</button>
+					</div>
+				</form>
+			</div>
+		</div>
   </div>
 
 

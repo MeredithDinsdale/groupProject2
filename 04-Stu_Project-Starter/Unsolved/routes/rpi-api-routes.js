@@ -7,11 +7,11 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/api/posts/:mac_address", function(req, res) {
+  app.get("/api/data/:mac_address", function(req, res) {
     db.rpi
       .findOne({
         where: {
-          mac_address: req.params.mac_address
+          mac: req.params.mac_address
         }
       })
       .then(function(dbrpi) {
