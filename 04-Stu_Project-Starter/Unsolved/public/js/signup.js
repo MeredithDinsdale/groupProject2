@@ -1,6 +1,7 @@
 $(document).ready(function() {
   // Getting references to our form and input
   var signUpForm = $(".signup");
+  var nameInput = $("#name-input");
   var emailInput = $("#email-input");
   var passwordInput = $("#password-input");
   var macInput = $("#mac-input");
@@ -20,6 +21,7 @@ $(document).ready(function() {
     // If we have an email and password, run the signUpUser function
     signUpUser(userData.email, userData.password, userData.mac);
 
+    nameInput.val("");
     emailInput.val("");
     passwordInput.val("");
     macInput.val("");
@@ -33,12 +35,19 @@ $(document).ready(function() {
       password: password,
       mac: mac
     })
-      .then(function(data) {
-        window.location.replace(data);
-        window.location.href = "/login";
+      .then(function(res) {
+        console.log(res);
+        //window.location.replace(data);
+
+        //window.location.href = "/login";
         // If there's an error, handle it by throwing up a bootstrap alert
       })
-      .catch(handleLoginErr);
+      .catch(function(err) {
+        console.log(err.status);
+        if (err.status === 409) {
+          alert("That Email or Sensor Code is already taken");
+        }
+      });
   }
 
   function handleLoginErr(err) {

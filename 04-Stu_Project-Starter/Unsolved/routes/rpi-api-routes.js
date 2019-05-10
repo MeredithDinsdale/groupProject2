@@ -7,7 +7,7 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/api/posts/:mac_address", function(req, res) {
+  app.get("/api/data/:mac_address", function(req, res) {
     db.rpi
       .findOne({
         where: {
