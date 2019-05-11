@@ -39,7 +39,7 @@ $(document).ready(function() {
         console.log(res);
         //window.location.replace(data);
 
-        //window.location.href = "/login";
+        window.location.href = "/login";
         // If there's an error, handle it by throwing up a bootstrap alert
       })
       .catch(function(err) {

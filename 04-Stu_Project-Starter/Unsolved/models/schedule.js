@@ -19,7 +19,7 @@ module.exports = function(sequelize, DataTypes) {
     // A schedule post can't be created without a user due to the foreign key constraint
     schedule.belongsTo(models.User, {
       foreignKey: {
-        allowNull: false
+        allowNull: true
       }
     });
   };

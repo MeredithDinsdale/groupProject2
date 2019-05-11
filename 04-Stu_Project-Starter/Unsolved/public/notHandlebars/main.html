@@ -2,11 +2,12 @@
 <html>
 
 <head>
-  <meta charset="utf-8" <meta name="viewport" content="width=device-width,height=device-height initial-scale=1">
+  <meta charset="utf-8" name="viewport" content="width=device-width,height=device-height initial-scale=1">
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-  </script>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
   </script>
@@ -22,20 +23,19 @@
 </head>
 
 <body>
-  <div class="container">
+<div class="container">
+<!-- Headline navigation and image -->
+
     <nav class="navbar justify-content-center">
       <form class="form-inline">
-        <button class="btn btn-sm nav" type="button"><a href="./journal.html">YOUR Journal</a></button>
-        <button class="btn btn-sm btn-outline-secondary nav" type="button"><a href="./timeline.html">AJA
+        <button class="btn btn-sm nav" type="button"><a href="./journal">YOUR Journal</a></button>
+        <button class="btn btn-sm btn-outline-secondary nav" type="button"><a href="./timeline">AJA
             Timeline</a></button>
       </form>
     </nav>
-
     <h1 class="aja text-center"><img src="../notHandlebars/assets/aja-logo@2x.png" class="logo">AJA </h1>
 
-
-
-
+<!-- Temp Display -->
     <div class="row">
       <div class="col-sm-8 mx-auto">
 
@@ -57,7 +57,15 @@
         </div>
       </div>
     </div>
+
+<!-- Light Button and Display -->
+  <div class="row">
+    <div class="light-display"></div>
+    <button class="btn btn-sm btn-outline-secondary light-btn" type="button">Light</button>
   </div>
+</div>
+
+
 
   <!-- cdn for charts -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
